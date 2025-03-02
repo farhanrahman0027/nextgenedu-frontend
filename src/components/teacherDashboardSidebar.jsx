@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 const TeacherDashboardSidebar = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  //handle logout
   const handleLogout = () => {
     toast.success("Logout Successfully");
     localStorage.removeItem("token");
