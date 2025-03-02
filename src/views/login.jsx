@@ -84,6 +84,7 @@ const Login = (props) => {
           role: "",
         });
       }
+      navigate("/login");
     } catch (error) {
       toast.error("registration failed!!");
       console.log("error:", error);

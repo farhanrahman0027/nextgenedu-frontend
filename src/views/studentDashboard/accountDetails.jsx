@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-import profilePhoto from "../../assets/images/hibban-photo.jpg";
+import profilePhoto from "../../assets/images/user.webp";
 import VARIABLES from "../../../environmentVariables";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -21,8 +21,6 @@ const AccountDetails = () => {
     phone: "",
     expertise: "",
     username: "",
-    password: "",
-    confirmPassword: "",
     profileImage: "",
     pincode: "",
     address: "",
@@ -57,8 +55,6 @@ const AccountDetails = () => {
           phone: response.data.data.phone,
           expertise: response.data.data.expertise,
           username: response.data.data.username,
-          password: response.data.data.password,
-          confirmPassword: "",
           profileImage: response.data.data.profileImage,
           pincode: response.data.data.pincode,
           address: response.data.data.address,
@@ -185,6 +181,22 @@ const AccountDetails = () => {
                 </div>
                 <div className="input-feild col-lg-6 row m-0 p-0 pe-lg-3 mb-3 mt-3 position-relative ">
                   <label
+                    htmlFor="username"
+                    className="m-0 p-0 text-secondary position-absolute w-auto ps-2 pe-2"
+                  >
+                    User name
+                  </label>
+                  <input
+                    type="text"
+                    className="border border-1 rounded-2 p-2 ps-3 m-0 bg-white text-black"
+                    id="username"
+                    name="username"
+                    onChange={handleInputChange}
+                    value={userDetails.username.replace(/\s+/g, '').toLowerCase()}
+                  />
+                </div>
+                <div className="input-feild col-lg-6 row m-0 p-0 pe-lg-3 mb-3 mt-3 position-relative ">
+                  <label
                     htmlFor="email"
                     className="m-0 p-0 text-secondary position-absolute w-auto ps-2 pe-2"
                   >
@@ -199,6 +211,7 @@ const AccountDetails = () => {
                     value={userDetails.email}
                   />
                 </div>
+                
                 <div className="input-feild col-lg-6 row m-0 p-0 pe-lg-3 mb-3 mt-3 position-relative ">
                   <label
                     htmlFor="phone"
@@ -231,54 +244,8 @@ const AccountDetails = () => {
                     value={userDetails.expertise}
                   />
                 </div>
-                <div className="input-feild col-lg-6 row m-0 p-0 pe-lg-3 mb-3 mt-3 position-relative ">
-                  <label
-                    htmlFor="username"
-                    className="m-0 p-0 text-secondary position-absolute w-auto ps-2 pe-2"
-                  >
-                    User name
-                  </label>
-                  <input
-                    type="text"
-                    className="border border-1 rounded-2 p-2 ps-3 m-0 bg-white text-black"
-                    id="username"
-                    name="username"
-                    onChange={handleInputChange}
-                    value={userDetails.username}
-                  />
-                </div>
-                <div className="input-feild col-lg-6 row m-0 p-0 pe-lg-3 mb-3 mt-3 position-relative ">
-                  <label
-                    htmlFor="password"
-                    className="m-0 p-0 text-secondary position-absolute w-auto ps-2 pe-2"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="text"
-                    className="border border-1 rounded-2 p-2 ps-3 m-0 bg-white text-black"
-                    id="password"
-                    name="password"
-                    onChange={handleInputChange}
-                    value={userDetails.password}
-                  />
-                </div>
-                <div className="input-feild col-lg-6 row m-0 p-0 pe-lg-3 mb-3 mt-3 position-relative ">
-                  <label
-                    htmlFor="confirmPassword"
-                    className="m-0 p-0 text-secondary position-absolute w-auto ps-2 pe-2"
-                  >
-                    Confirm Password
-                  </label>
-                  <input
-                    type="text"
-                    className="border border-1 rounded-2 p-2 ps-3 m-0 bg-white text-black"
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    onChange={handleInputChange}
-                    value={userDetails.confirmPassword}
-                  />
-                </div>
+                
+                
               </div>
             </div>
             <div className="col-lg-3">

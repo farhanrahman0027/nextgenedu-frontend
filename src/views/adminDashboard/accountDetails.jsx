@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import profilePhoto from "../../assets/images/hibban-photo.jpg";
+import profilePhoto from "../../assets/images/user.webp";
 import VARIABLES from "../../../environmentVariables";
 import axios from "axios";
 import { toast } from "react-toastify";
