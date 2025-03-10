@@ -14,7 +14,7 @@ const Footer = () => {
           <p className="m-0 p-0 text-light fw-medium text-center text-lg-start">nextgenedu@gmail.com</p>
 
           <p className="m-0 p-0 text-light fw-medium text-center text-lg-start">
-            hibbanrahmanhyt@gmail.com
+            farhanrahman0027@gmail.com
           </p>
         </div>
         <div className="col-lg-3 mt-lg-0 mt-5 col-8 p-lg-5 pt-0">
